@@ -1,0 +1,20 @@
+int blinker = 13;
+int gled = 8;
+int yled = 9;
+int rled = 10;
+
+void setup() {
+  
+  pinMode(blinker, OUTPUT);
+  pinMode(gled, OUTPUT);
+  pinMode(yled, OUTPUT);
+  pinMode(rled, OUTPUT);
+}
+
+void loop() {
+  
+  digitalWrite(blinker, LOW);
+  digitalWrite(gled, LOW);
+  digitalWrite(yled, LOW);
+  digitalWrite(rled, LOW);
+}
