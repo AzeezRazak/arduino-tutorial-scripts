@@ -1,0 +1,42 @@
+int blinker = 13;
+int gled = 8;
+int yled = 9;
+int rled = 10;
+
+int buttonPin = 7;
+int buttonState = 0;
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(blinker, OUTPUT);
+  pinMode(gled, OUTPUT);
+  pinMode(yled, OUTPUT);
+  pinMode(rled, OUTPUT);
+  pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  digitalWrite(blinker, LOW);
+  digitalWrite(gled, LOW);
+  digitalWrite(yled, LOW);
+  digitalWrite(rled, LOW);
+
+  buttonState = digitalRead(buttonPin);
+
+  if (buttonState == HIGH){
+    digitalWrite(gled, HIGH);
+    delay(3000);
+    digitalWrite(gled, LOW);
+    digitalWrite(yled, HIGH);
+    delay(3000);
+    digitalWrite(yled, LOW);
+    digitalWrite(rled, HIGH);
+    digitalWrite(blinker, HIGH);
+    delay(1000);
+    digitalWrite(blinker, LOW);
+    delay(1000);
+  } else {
+    digitalWrite(blinker, HIGH);
+  }
+}
