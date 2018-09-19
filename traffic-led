@@ -1,7 +1,7 @@
 int blinker = 13;
-int gled = 8;
-int yled = 9;
-int rled = 10;
+int gled = 10;
+int yled = 11;
+int rled = 12;
 
 int buttonPin = 7;
 int buttonState = 0;
@@ -26,17 +26,34 @@ void loop() {
 
   if (buttonState == HIGH){
     digitalWrite(gled, HIGH);
-    delay(3000);
+    delay(1000);
     digitalWrite(gled, LOW);
     digitalWrite(yled, HIGH);
-    delay(3000);
+    delay(1000);
     digitalWrite(yled, LOW);
     digitalWrite(rled, HIGH);
+    
     digitalWrite(blinker, HIGH);
-    delay(1000);
+    delay(500);
     digitalWrite(blinker, LOW);
-    delay(1000);
-  } else {
+    delay(500);
     digitalWrite(blinker, HIGH);
+    delay(500);
+    digitalWrite(blinker, LOW);
+    delay(500);
+    digitalWrite(blinker, HIGH);
+    delay(500);
+    digitalWrite(blinker, LOW);
+    delay(500);
+    digitalWrite(blinker, HIGH);
+    delay(500);
+    digitalWrite(blinker, LOW);
+    delay(500);
+    digitalWrite(blinker, HIGH);
+    delay(500);
+    digitalWrite(blinker, LOW);
+    delay(500);
+  } else {
+    digitalWrite(gled, HIGH);
   }
 }
